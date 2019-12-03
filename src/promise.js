@@ -62,6 +62,7 @@ class Promise {
             onFullfilled = function (value) {
                 return value;
             }
+            console.log(onFullfilled);
         }
 
         if (typeof onRejected !== 'function') {
@@ -71,7 +72,6 @@ class Promise {
         }
 
         let promise2 = new Promise((resolve, reject) => {
-
             if (this.state === Promise.FULLFILLED) {
                 setTimeout(() => {
                     try {
@@ -117,6 +117,7 @@ class Promise {
                     })
                 });
             }
+
         });
         return promise2;
     }
